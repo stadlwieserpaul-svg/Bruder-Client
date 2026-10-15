@@ -1,32 +1,38 @@
+
 name: Build BruderClient
 
 on:
-push:
-branches: [ "main" ]
-workflow_dispatch:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-build:
-runs-on: ubuntu-latest
-permissions:
-contents: read
-steps:
-- uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
 
-  - name: Set up Java 21
-    uses: actions/setup-java@v4
-    with:
-      java-version: '21'
-      distribution: temurin
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: temurin
 
-  - name: Build Minecraft mod
-    run: |
-      chmod +x gradlew
-      ./gradlew build
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.14.3'
 
-  - name: Upload JAR
-    uses: actions/upload-artifact@v4
-    with:
-      name: BruderClient-jar
-      path: build/libs/*.jar
-      if-no-files-found: error
+      - name: Build Minecraft mod
+        run: gradle build
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: BruderClient-jar
+          path: build/libs/*.jar
+          if-no-files-found: error
+
