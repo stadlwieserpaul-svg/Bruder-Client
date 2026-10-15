@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "bruderclient",
+  "version": "${version}",
+  "name": "BruderClient",
+  "description": "Client utility mod: Fullbright, ESP, Finders, Freecam, Free Look, HUD.",
+  "authors": ["Bruder"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": { "client": ["dev.bruder.client.BruderClient"] },
+  "mixins": ["bruderclient.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

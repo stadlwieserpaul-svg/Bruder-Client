@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "dev.bruder.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["CameraMixin", "EntityMixin", "ClientPlayerEntityMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

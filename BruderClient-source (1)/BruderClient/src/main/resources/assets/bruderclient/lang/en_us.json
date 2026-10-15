@@ -1,0 +1,14 @@
+{
+  "key.category.bruderclient.main": "BruderClient",
+  "key.bruderclient.gui": "Open GUI",
+  "key.bruderclient.fullbright": "Toggle Fullbright",
+  "key.bruderclient.player_esp": "Toggle Player ESP",
+  "key.bruderclient.entity_esp": "Toggle Entity ESP",
+  "key.bruderclient.look_esp": "Toggle Look ESP",
+  "key.bruderclient.block_finder": "Toggle Block Finder",
+  "key.bruderclient.chunk_finder": "Toggle Chunk Finder",
+  "key.bruderclient.free_look": "Toggle Free Look",
+  "key.bruderclient.freecam": "Toggle Freecam",
+  "key.bruderclient.coords": "Toggle XYZ",
+  "key.bruderclient.fps": "Toggle FPS"
+}
